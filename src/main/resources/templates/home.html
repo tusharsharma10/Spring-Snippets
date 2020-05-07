@@ -19,15 +19,47 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 
 <body>
 
-    <h1>Home</h1>
+    <h1 class="text-center text-info">Home</h1>
+   
+    <div class="container">
+
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <table class="table table-border table-striped">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th>Username</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col align-self-end">
+                <form th:action="@{/logout}" class="form-group" method="POST">
+                    <button type="submit" class="btn btn-primary">Logout</button>  
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
 
 </body>
 
 </html>
-
-
