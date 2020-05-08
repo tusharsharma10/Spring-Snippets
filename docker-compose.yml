@@ -1,0 +1,21 @@
+version: '3'
+services:
+  
+  mysql-dev:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: user_info
+    ports:
+      ["3307:3306"]
+
+
+  sboot-app:
+    container_name:  mvc-app
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+
+    image: mvc-app
+    ports:
+       ["80:8080"]
