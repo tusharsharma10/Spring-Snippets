@@ -20,7 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		User user = userRepo.findByUsername(username);
 		
 		if(user!=null)
-			return user;
+			return new CustomUserDetails(user);
 		
 		throw new UsernameNotFoundException("User with "+username+" not found");
 		

@@ -45,7 +45,7 @@ public String getUsername() {
 	
 	public User toUser(PasswordEncoder passwordEncoder) {
 	
-		return new User(username, passwordEncoder.encode(password));
+		return new User(username, passwordEncoder.encode(password),"USER");
 	}
 	
 	
